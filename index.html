@@ -90,7 +90,7 @@
 		function coffeeTemplate(coffee){
 			let myReturn = `<p>
 				<img src="${coffee.pic}" alt="${coffee.alt}" id="coffee" />
-            <strong class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}</p>`;
+            <strong>${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily coffee special is <strong class="feature">${coffee.name}</strong>, ${coffee.desc}</p>`;
 			return myReturn;
 		}
 
@@ -101,7 +101,7 @@
 		const urlParams = new URLSearchParams(queryString);
 
 		if(urlParams.has('day')){
-			today = urlParstatusams.get('day');
+			today = urlParams.get('day');
 			today = parseInt(today);
 		}
 
